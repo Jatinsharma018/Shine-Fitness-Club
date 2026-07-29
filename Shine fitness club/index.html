@@ -591,6 +591,22 @@
             <button type="button" class="bmi-tab-btn" id="tab-in" onclick="switchBmiTab('in')">Total Inches</button>
           </div>
 
+          <!-- Age & Gender Input -->
+          <div class="bmi-input-group" style="display: flex; gap: 15px;">
+            <div style="flex: 1;">
+              <label for="bmi-age"><i class="fa-solid fa-user-clock"></i> Your Age</label>
+              <input type="number" id="bmi-age" class="bmi-control" placeholder="e.g. 30" min="10" max="100" oninput="calculateBMI()">
+            </div>
+            <div style="flex: 1;">
+              <label for="bmi-gender"><i class="fa-solid fa-venus-mars"></i> Gender</label>
+              <select id="bmi-gender" class="bmi-control" onchange="calculateBMI()" style="height: 52px; background: rgba(255, 255, 255, 0.05); border: 2px solid rgba(255, 255, 255, 0.1); color: var(--text-main); border-radius: 8px;">
+                <option value="" disabled selected style="color: black;">Select</option>
+                <option value="male" style="color: black;">Male</option>
+                <option value="female" style="color: black;">Female</option>
+              </select>
+            </div>
+          </div>
+
           <!-- Weight Input -->
           <div class="bmi-input-group">
             <label for="bmi-weight"><i class="fa-solid fa-weight-scale"></i> Your Weight in Kilograms (KG)</label>
@@ -655,6 +671,15 @@
             </button>
           </div>
         </div>
+      </div>
+      <div class="age-explanation" style="margin-top: 40px; padding: 25px; background: rgba(255, 255, 255, 0.03); border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);">
+        <h3 style="color: var(--primary-teal); margin-bottom: 15px; font-size: 1.2rem;">Chronological Age vs Biological Age (क्रोनोलॉजिकल उम्र vs बायोलॉजिकल उम्र)</h3>
+        <p style="margin-bottom: 10px; font-size: 0.95rem; line-height: 1.6; color: var(--text-light);">
+          <strong>Chronological Age (क्रोनोलॉजिकल उम्र):</strong> Yeh aapki actual age (asli umar) hai, jo aapke birth date se calculate hoti hai. Jaise agar aap 30 saal ke hain, toh aapki chronological age 30 hai.
+        </p>
+        <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-light);">
+          <strong>Biological Age (बायोलॉजिकल उम्र):</strong> Yeh aapki body ki andar se age hai, jo aapke fitness level, BMI, aur weight ke according decide hoti hai. Agar aapka weight aur BMI jyada hai, toh aapki body andar se apni actual age se zyada purani (boodhi) lagne lagti hai. Sahi weight aur healthy BMI se aap apni biological age ko actual age se kam rakh sakte hain!
+        </p>
       </div>
     </div>
   </section>
@@ -938,7 +963,7 @@
   <!-- ==========================================================================
        FLOATING WHATSAPP ACTION BUTTON
        ========================================================================== -->
-  <a href="https://wa.me/919876543210?text=Hello%20Vinod%20Sharma%20Sir,%20I%20want%20to%20know%20your%2025%20KG%20Weight%20Loss%20Secret%20and%20start%20my%20free%20consultation!"
+  <a href="https://wa.me/919839251050?text=Hello%20Vinod%20Sharma%20Sir,%20I%20want%20to%20know%20your%2025%20KG%20Weight%20Loss%20Secret%20and%20start%20my%20free%20consultation!"
     target="_blank" class="floating-wa-btn" aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
@@ -990,12 +1015,6 @@
 
   <!-- Javascript File -->
   <script src="script.js"></script>
-  
-  <!-- Vercel Web Analytics -->
-  <script>
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  </script>
-  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 
 </html>
