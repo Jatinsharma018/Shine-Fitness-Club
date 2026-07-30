@@ -1,0 +1,235 @@
+/* stylelint-disable */
+/* ==========================================================================
+   ULTRA-ATTRACTIVE UPGRADES (Animations, Glassmorphism, UI)
+   ========================================================================== */
+
+/* Theme Colors Overrides / Variables */
+:root {
+  --mint-green: #ccfbf1;
+  --fresh-teal: #0d9488;
+  --fresh-teal-hover: #115e59;
+  --warm-gold: #f59e0b;
+  --soft-white: #f8fafc;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-shadow: 0 8px 32px 0 rgba(13, 148, 136, 0.15);
+}
+
+/* Glassmorphism Utility */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.glass-panel:hover {
+  box-shadow: 0 12px 40px 0 rgba(13, 148, 136, 0.25);
+  border-color: rgba(13, 148, 136, 0.3);
+}
+
+/* Scroll Animations */
+[data-animate] {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: opacity 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+[data-animate="fade-in"] {
+  transform: translateY(0);
+}
+
+[data-animate="slide-up"] {
+  transform: translateY(40px);
+}
+
+[data-animate="scale-up"] {
+  transform: scale(0.9);
+}
+
+[data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* 1. BOOM Splash Screen Redesign */
+#splash-screen {
+  background: rgba(255, 255, 255, 0.4) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.boom-card {
+  background: white;
+  padding: 3rem;
+  border-radius: 2rem;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(13, 148, 136, 0.4);
+  border: 2px solid var(--mint-green);
+  animation: boom-bounce 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+.boom-sparkles {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: radial-gradient(circle, var(--warm-gold) 2px, transparent 2px), radial-gradient(circle, var(--fresh-teal) 2px, transparent 2px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  opacity: 0.1;
+  animation: sparkle-move 10s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes sparkle-move {
+  100% { background-position: 400px 400px, 420px 420px; }
+}
+
+@keyframes boom-bounce {
+  0% { transform: scale(0.3); opacity: 0; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.boom-header {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--fresh-teal);
+  text-shadow: 0 4px 10px rgba(13, 148, 136, 0.2);
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  font-family: 'Outfit', sans-serif;
+}
+
+.boom-subtext {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+/* Ripple Button Effect */
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-ripple::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: transform 0.6s, opacity 0.6s;
+}
+
+.btn-ripple:active::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition: 0s;
+}
+
+/* Custom BMI Toggles */
+.bmi-toggle-group {
+  display: flex;
+  background: #f1f5f9;
+  border-radius: 0.75rem;
+  padding: 0.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.bmi-toggle-input {
+  display: none;
+}
+
+.bmi-toggle-label {
+  flex: 1;
+  text-align: center;
+  padding: 0.75rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: #64748b;
+  z-index: 2;
+  transition: color 0.3s;
+}
+
+.bmi-toggle-input:checked + .bmi-toggle-label {
+  color: white;
+}
+
+.bmi-toggle-slider {
+  position: absolute;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  width: calc(50% - 0.25rem);
+  background: var(--fresh-teal);
+  border-radius: 0.5rem;
+  z-index: 1;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#gender-female:checked ~ .bmi-toggle-slider {
+  transform: translateX(100%);
+}
+
+#unit-cm:checked ~ .bmi-toggle-slider {
+  transform: translateX(100%);
+}
+
+/* Dynamic Health Alert Card */
+.health-risk-card {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: all 0.5s ease;
+  display: none; /* hidden until calc */
+  color: white;
+}
+
+.health-risk-card.show {
+  display: block;
+  animation: fadeInDown 0.5s forwards;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.risk-normal { background: linear-gradient(135deg, #10b981, #059669); }
+.risk-under { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.risk-over { background: linear-gradient(135deg, #f97316, #ea580c); }
+.risk-obese { background: linear-gradient(135deg, #ef4444, #dc2626); }
+
+.bio-age {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-top: 0.5rem;
+  background: rgba(0,0,0,0.2);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+}
+
+/* Seamless Flip Card Refinement */
+.new-flip-card-inner {
+  transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Pulse bar animation */
+@keyframes pulse-bar {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
