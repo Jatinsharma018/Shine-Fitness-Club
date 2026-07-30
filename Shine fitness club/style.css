@@ -1483,6 +1483,22 @@ img {
     gap: 12px;
   }
 
+  .header-actions {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .header-contact-btn {
+    font-size: 0.85rem !important;
+    padding: 6px 10px !important;
+  }
+
+  .brand-logo-img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
   .coach-img-box img {
     height: 320px;
   }
