@@ -1,3 +1,4 @@
+/* eslint-disable */
 /* ==========================================================================
    SHINE FITNESS CLUB - INTERACTIVE LOGIC & 3D SLIDER
    By Vinod Sharma | 25 KG Weight Loss Secret

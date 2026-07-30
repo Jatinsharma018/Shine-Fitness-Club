@@ -56,7 +56,10 @@ window.calculateSmartBMI = () => {
   const riskBioAge = document.getElementById('risk-bio-age');
 
   if (!ageInput || !weightInput) {
-    alert("Please enter your age and weight.");
+    riskCard.classList.remove('show');
+    scoreVal.textContent = '--';
+    statusLbl.textContent = 'Enter Details Above';
+    if (alertContainer) alertContainer.style.display = 'block';
     return;
   }
 
@@ -66,7 +69,10 @@ window.calculateSmartBMI = () => {
     const ftInput = document.getElementById('bmi-ft').value;
     const inInput = document.getElementById('bmi-in-rem').value || 0;
     if (!ftInput) {
-      alert("Please enter your height in feet.");
+      riskCard.classList.remove('show');
+      scoreVal.textContent = '--';
+      statusLbl.textContent = 'Enter Details Above';
+      if (alertContainer) alertContainer.style.display = 'block';
       return;
     }
     const totalInches = (parseInt(ftInput) * 12) + parseInt(inInput);
@@ -74,7 +80,10 @@ window.calculateSmartBMI = () => {
   } else {
     const cmInput = document.getElementById('bmi-cm').value;
     if (!cmInput) {
-      alert("Please enter your height in CM.");
+      riskCard.classList.remove('show');
+      scoreVal.textContent = '--';
+      statusLbl.textContent = 'Enter Details Above';
+      if (alertContainer) alertContainer.style.display = 'block';
       return;
     }
     heightInMeters = parseInt(cmInput) / 100;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- htmlhint-disable -->
   <!-- eslint-disable -->
@@ -58,9 +59,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     @keyframes boom {
-      0% { transform: scale(0.5); opacity: 0; }
-      50% { transform: scale(1.2); opacity: 1; }
-      100% { transform: scale(1); opacity: 1; }
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+
+      50% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
   </style>
 
@@ -71,12 +83,14 @@
 
 <body>
   <!-- SPLASH SCREEN / BOOM BLAST -->
-  <div id="splash-screen" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 999999; display: none; justify-content: center; align-items: center; transition: opacity 0.5s ease-out, transform 0.5s ease-out; transform: scale(1); opacity: 1;">
+  <div id="splash-screen"
+    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 999999; display: none; justify-content: center; align-items: center; transition: opacity 0.5s ease-out, transform 0.5s ease-out; transform: scale(1); opacity: 1;">
     <div class="boom-card">
       <div class="boom-sparkles"></div>
       <h1 class="boom-header">💥 B-O-O-M!<br>CONGRATULATIONS!</h1>
       <p class="boom-subtext">You've unlocked a 3-DAY FREE LIVE TRIAL SESSION &amp; 21-Day Weight Loss Challenge!</p>
-      <button id="boom-cta-btn" class="new-cta-btn new-large new-glow new-open-survey-btn btn-ripple">👉 CLAIM MY FREE LIVE SESSION NOW</button>
+      <button type="button" id="boom-cta-btn" class="new-cta-btn new-large new-glow new-open-survey-btn btn-ripple">👉 CLAIM MY FREE
+        LIVE SESSION NOW</button>
     </div>
   </div>
 
@@ -95,7 +109,7 @@
        ========================================================================== -->
   <header class="main-header">
     <div class="header-container">
-      <a href="#" class="brand-logo">
+      <a href="javascript:void(0)" class="brand-logo">
         <img src="images/logo.jpg" alt="Shine Fitness Club Logo" class="brand-logo-img">
         <div class="brand-text-box">
           <span class="brand-title">SHINE FITNESS CLUB</span>
@@ -112,7 +126,7 @@
           style="background: transparent; border: none; color: var(--text-main);">The Secret</a>
         <a href="#about-coach" class="header-contact-btn"
           style="background: transparent; border: none; color: var(--text-main);">About</a>
-        <button class="header-contact-btn open-modal-btn">
+        <button type="button" class="header-contact-btn open-modal-btn">
           <i class="fa-solid fa-bolt"></i> Free Consultation
         </button>
       </div>
@@ -122,20 +136,26 @@
   <!-- NEW SECTION 1: URGENCY OFFER BAR -->
   <div class="new-urgency-banner new-sticky-banner">
     <div class="new-banner-content" style="flex-wrap: wrap; justify-content: center;">
-      <p style="width: 100%; font-size: 1.1rem;">🎁 LIMITED TIME OFFER: Get 3-Day FREE Live Coaching Trial + Join 21-Day Weight Loss Challenge! 🚀</p>
-      
+      <p style="width: 100%; font-size: 1.1rem;">🎁 LIMITED TIME OFFER: Get 3-Day FREE Live Coaching Trial + Join 21-Day
+        Weight Loss Challenge! 🚀</p>
+
       <!-- FOMO Progress Bar -->
       <div style="width: 100%; max-width: 400px; margin: 0.5rem 0;">
-        <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.25rem; font-weight: 700; color: #b91c1c;">
+        <div
+          style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 0.25rem; font-weight: 700; color: #b91c1c;">
           <span>🔥 Hurry! Only 4 Seats Left For This Batch!</span>
           <span>90% Full</span>
         </div>
-        <div style="width: 100%; height: 8px; background: rgba(0,0,0,0.1); border-radius: 9999px; overflow: hidden; position: relative;">
-          <div style="width: 90%; height: 100%; background: #ef4444; border-radius: 9999px; animation: pulse-bar 1.5s infinite;"></div>
+        <div
+          style="width: 100%; height: 8px; background: rgba(0,0,0,0.1); border-radius: 9999px; overflow: hidden; position: relative;">
+          <div
+            style="width: 90%; height: 100%; background: #ef4444; border-radius: 9999px; animation: pulse-bar 1.5s infinite;">
+          </div>
         </div>
       </div>
 
-      <button class="new-cta-btn new-small new-open-survey-btn btn-ripple" style="margin-top: 0.5rem;">[ Claim Free Trial Now ]</button>
+      <button type="button" class="new-cta-btn new-small new-open-survey-btn btn-ripple" style="margin-top: 0.5rem;">[ Claim Free
+        Trial Now ]</button>
     </div>
   </div>
 
@@ -163,11 +183,13 @@
 
         <div class="hero-subheadline">
           <p>I went from <strong>110 KG to 85 KG</strong> and lost <strong>25 KG of pure fat!</strong> Now it's your
-            turn to join our <strong>10 to 25 kg weight loss program online</strong> with personalized guidance from <strong>Vinod Sharma</strong>. Experience sustainable <strong>weight loss without starving</strong>!</p>
+            turn to join our <strong>10 to 25 kg weight loss program online</strong> with personalized guidance from
+            <strong>Vinod Sharma</strong>. Experience sustainable <strong>weight loss without starving</strong>!
+          </p>
         </div>
 
         <div class="hero-cta-wrapper">
-          <button class="btn-primary-animated open-modal-btn">
+          <button type="button" class="btn-primary-animated open-modal-btn">
             <span>🚀 START YOUR FREE CONSULTATION</span>
           </button>
           <div class="btn-guarantee-text">
@@ -200,7 +222,7 @@
             <div class="coach-profile-meta">
               <div class="coach-avatar">VS</div>
               <div class="coach-name-tag">
-                <h4>Vinod Sharma</h4>
+                <h2>Vinod Sharma</h2>
                 <p>Founder &amp; Weight Loss Expert</p>
               </div>
             </div>
@@ -240,7 +262,7 @@
         <div class="floating-card-1">
           <div class="floating-icon">🍕</div>
           <div class="floating-text">
-            <h5>Zero Starvation</h5>
+            <h3>Zero Starvation</h3>
             <p>Eat Home Food &amp; Lose Fat!</p>
           </div>
         </div>
@@ -255,14 +277,16 @@
       <div class="new-offer-details">
         <div class="new-offer-item">
           <span class="new-icon">✨</span>
-          <p><strong>3-Day Free Live Sessions:</strong> Get 3 days of direct live guidance, diet orientation &amp; daily motivation 100% Free!</p>
+          <p><strong>3-Day Free Live Sessions:</strong> Get 3 days of direct live guidance, diet orientation &amp; daily
+            motivation 100% Free!</p>
         </div>
         <div class="new-offer-item">
           <span class="new-icon">🏆</span>
-          <p><strong>21-Day Weight Loss Challenge:</strong> Kickstart your fat loss journey with a structured 21-day transformation plan guided by Coach Vinod Sharma.</p>
+          <p><strong>21-Day Weight Loss Challenge:</strong> Kickstart your fat loss journey with a structured 21-day
+            transformation plan guided by Coach Vinod Sharma.</p>
         </div>
       </div>
-      
+
       <div class="new-countdown-container">
         <p>⚡ Offer Expires In: <span id="new-countdown-timer" class="new-timer">00h : 29m : 59s</span></p>
       </div>
@@ -274,7 +298,8 @@
         </div>
       </div>
 
-      <button class="new-cta-btn new-large new-glow new-open-survey-btn btn-ripple">🚀 CLAIM 3-DAY FREE TRIAL &amp; JOIN 21-DAY CHALLENGE</button>
+      <button type="button" class="new-cta-btn new-large new-glow new-open-survey-btn btn-ripple">🚀 CLAIM 3-DAY FREE TRIAL &amp; JOIN
+        21-DAY CHALLENGE</button>
     </div>
   </section>
 
@@ -293,7 +318,8 @@
     <div class="coach-feature-container">
       <div class="coach-feature-card">
         <div class="coach-img-box">
-          <img src="images/vinod-sharma-transformation.jpg" alt="vinod-sharma-25kg-weight-loss-transformation online-weight-loss-coaching-india journey before and after">
+          <img src="images/vinod-sharma-transformation.jpg"
+            alt="vinod-sharma-25kg-weight-loss-transformation online-weight-loss-coaching-india journey before and after">
           <div class="coach-img-overlay">
             <span class="tag-before-after">Before / After</span>
             <span style="color: #ffffff; font-weight: 800; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Vinod Sharma &amp;
@@ -308,7 +334,9 @@
           </div>
           <h3>Vinod Sharma's 25 KG Fat Loss Secret - Online Fitness Coach India</h3>
           <p class="coach-quote">"When I weighed 110 KG, I struggled with low energy and tried endless crash diets that
-            never worked. I decided to study the science of natural metabolism. As an <strong>online fitness coach India</strong>, my own <strong>25 kg weight loss transformation</strong> (from 110 KG down to 85 KG) proved that you can shed stubborn fat while enjoying daily Indian meals without starving!"</p>
+            never worked. I decided to study the science of natural metabolism. As an <strong>online fitness coach
+              India</strong>, my own <strong>25 kg weight loss transformation</strong> (from 110 KG down to 85 KG)
+            proved that you can shed stubborn fat while enjoying daily Indian meals without starving!"</p>
 
           <div class="coach-stat-pills">
             <div class="stat-pill">
@@ -325,7 +353,7 @@
             </div>
           </div>
 
-          <button class="btn-primary-animated open-modal-btn" style="padding: 14px 28px; font-size: 1rem;">
+          <button type="button" class="btn-primary-animated open-modal-btn" style="padding: 14px 28px; font-size: 1rem;">
             <span>Get Vinod Sir's Diet Plan ➔</span>
           </button>
         </div>
@@ -335,9 +363,9 @@
     <!-- Interactive 3D Card Slider -->
     <div class="slider-container">
       <div class="slider-controls">
-        <button class="slider-btn prev-btn" aria-label="Previous Transformation"><i
+        <button type="button" class="slider-btn prev-btn" aria-label="Previous Transformation"><i
             class="fa-solid fa-chevron-left"></i></button>
-        <button class="slider-btn next-btn" aria-label="Next Transformation"><i
+        <button type="button" class="slider-btn next-btn" aria-label="Next Transformation"><i
             class="fa-solid fa-chevron-right"></i></button>
       </div>
 
@@ -347,9 +375,9 @@
           <!-- Card 1: Pawan Tiwari (-78 KG) -->
           <div class="trans-card">
             <div class="trans-img-wrapper">
-               <span class="trans-badge-top">Remarkable Transformation</span>
-               <img src="images/member-1-transformation.jpg" alt="Pawan Tiwari Weight Loss Transformation Before After">
-               <span class="trans-weight-badge">-78 KG LOSS</span>
+              <span class="trans-badge-top">Remarkable Transformation</span>
+              <img src="images/member-1-transformation.jpg" alt="Pawan Tiwari Weight Loss Transformation Before After">
+              <span class="trans-weight-badge">-78 KG LOSS</span>
             </div>
             <div class="trans-content">
               <div class="member-name">
@@ -360,7 +388,9 @@
                 <i class="fa-solid fa-scale-balanced"></i>
                 <span>164 KG ➔ 86 KG (Lost 78 KG)</span>
               </div>
-              <p class="member-story">"Inability to walk properly, severe breathlessness, and extreme obesity are completely resolved! With Shine Fitness Club, I completed the 21–22 km Mathura Parikrama on foot effortlessly, and my medical test reports are now completely normal."</p>
+              <p class="member-story">"Inability to walk properly, severe breathlessness, and extreme obesity are
+                completely resolved! With Shine Fitness Club, I completed the 21–22 km Mathura Parikrama on foot
+                effortlessly, and my medical test reports are now completely normal."</p>
               <div class="card-footer">
                 <span><i class="fa-regular fa-clock"></i> Kusmara, UP</span>
                 <span class="check-mark"><i class="fa-solid fa-check"></i> Verified Member</span>
@@ -384,7 +414,9 @@
                 <i class="fa-solid fa-scale-balanced"></i>
                 <span>Lost 40–42 KG Pure Weight</span>
               </div>
-              <p class="member-story">"Overcame extreme lethargy, heaviness, and laziness during my daily work routines! As a milk vendor (dairy), I now perform my daily routines with high energy and speed. Completely fit and active!"</p>
+              <p class="member-story">"Overcame extreme lethargy, heaviness, and laziness during my daily work routines!
+                As a milk vendor (dairy), I now perform my daily routines with high energy and speed. Completely fit and
+                active!"</p>
               <div class="card-footer">
                 <span><i class="fa-regular fa-clock"></i> Prayagraj, UP (Milk Vendor)</span>
                 <span class="check-mark"><i class="fa-solid fa-check"></i> Verified Member</span>
@@ -408,7 +440,9 @@
                 <i class="fa-solid fa-scale-balanced"></i>
                 <span>Lost 16 KG &amp; Knee Pain Resolved</span>
               </div>
-              <p class="member-story">"At age 36, knee pain, laziness (aalaspan), and weakness had slowed me down. Thanks to Vinod Sharma Sir's guidance, I lost 16 KG, looking gorgeous, fit and fine with zero knee pain!"</p>
+              <p class="member-story">"At age 36, knee pain, laziness (aalaspan), and weakness had slowed me down.
+                Thanks to Vinod Sharma Sir's guidance, I lost 16 KG, looking gorgeous, fit and fine with zero knee
+                pain!"</p>
               <div class="card-footer">
                 <span><i class="fa-regular fa-clock"></i> Varanasi, UP</span>
                 <span class="check-mark"><i class="fa-solid fa-check"></i> Verified Member</span>
@@ -420,7 +454,8 @@
           <div class="trans-card">
             <div class="trans-img-wrapper">
               <span class="trans-badge-top">32 KG Weight Loss</span>
-              <img src="images/member-2-transformation.jpg" alt="Shailesh Mishra Weight Loss Transformation Before After">
+              <img src="images/member-2-transformation.jpg"
+                alt="Shailesh Mishra Weight Loss Transformation Before After">
               <span class="trans-weight-badge">-32 KG LOSS</span>
             </div>
             <div class="trans-content">
@@ -432,7 +467,9 @@
                 <i class="fa-solid fa-scale-balanced"></i>
                 <span>Lost 32 KG Stubborn Fat</span>
               </div>
-              <p class="member-story">"Suffered from chronic joint and knee pain along with other obesity-related discomforts. By following this natural Indian meal plan, I lost 32 KG and am completely pain-free, active, and enjoying a joyful, healthy lifestyle!"</p>
+              <p class="member-story">"Suffered from chronic joint and knee pain along with other obesity-related
+                discomforts. By following this natural Indian meal plan, I lost 32 KG and am completely pain-free,
+                active, and enjoying a joyful, healthy lifestyle!"</p>
               <div class="card-footer">
                 <span><i class="fa-regular fa-clock"></i> Mainpuri, UP</span>
                 <span class="check-mark"><i class="fa-solid fa-check"></i> Verified Member</span>
@@ -457,7 +494,9 @@
                 <i class="fa-solid fa-scale-balanced"></i>
                 <span>Vinod: 110➔85 KG (-25 KG) | Sunita: 80➔65 KG (-15 KG)</span>
               </div>
-              <p class="member-story">"Vinod (46 yrs) resolved severe knee/leg pain &amp; extreme fatigue sitting at his shop. Sunita (44 yrs) resolved leg swelling &amp; skin spots. Together we lost 40+ KG (15–16 inches lost) and transformed into a highly active, healthy, and happy family!"</p>
+              <p class="member-story">"Vinod (46 yrs) resolved severe knee/leg pain &amp; extreme fatigue sitting at his
+                shop. Sunita (44 yrs) resolved leg swelling &amp; skin spots. Together we lost 40+ KG (15–16 inches
+                lost) and transformed into a highly active, healthy, and happy family!"</p>
               <div class="card-footer">
                 <span><i class="fa-regular fa-clock"></i> 15-16 Inches Lost</span>
                 <span class="check-mark"><i class="fa-solid fa-check"></i> Founder &amp; Coach</span>
@@ -481,7 +520,9 @@
                 <i class="fa-solid fa-scale-balanced"></i>
                 <span>Lost 18 KG Body Weight</span>
               </div>
-              <p class="member-story">"As a teacher at GAIL (Age 35), I struggled with leg pain, body swelling, and health complications due to excess weight. Shedding 18 KG naturally gave me extreme confidence, fitness, and vibrant classroom energy!"</p>
+              <p class="member-story">"As a teacher at GAIL (Age 35), I struggled with leg pain, body swelling, and
+                health complications due to excess weight. Shedding 18 KG naturally gave me extreme confidence, fitness,
+                and vibrant classroom energy!"</p>
               <div class="card-footer">
                 <span><i class="fa-regular fa-clock"></i> Teacher at GAIL, Dibiyapur</span>
                 <span class="check-mark"><i class="fa-solid fa-check"></i> Verified Member</span>
@@ -505,7 +546,9 @@
                 <i class="fa-solid fa-scale-balanced"></i>
                 <span>Lost 12 KG Heavy Belly Fat</span>
               </div>
-              <p class="member-story">"At 52, I had heavy belly fat and total dependence on allopathic medications. With this natural Indian guidance, my belly fat reduced completely, I became 100% free from medicines, and achieved overall health and family happiness!"</p>
+              <p class="member-story">"At 52, I had heavy belly fat and total dependence on allopathic medications. With
+                this natural Indian guidance, my belly fat reduced completely, I became 100% free from medicines, and
+                achieved overall health and family happiness!"</p>
               <div class="card-footer">
                 <span><i class="fa-regular fa-clock"></i> Gursahaiganj, UP</span>
                 <span class="check-mark"><i class="fa-solid fa-check"></i> Verified Member</span>
@@ -529,7 +572,9 @@
                 <i class="fa-solid fa-scale-balanced"></i>
                 <span>Lost 18 KG Body Weight</span>
               </div>
-              <p class="member-story">"Suffered from severe leg pain and mild breathing difficulties. Thanks to this natural Indian guidance, I have fully recovered from breathing issues and leg pain and am now living a fit, active, and vibrant life!"</p>
+              <p class="member-story">"Suffered from severe leg pain and mild breathing difficulties. Thanks to this
+                natural Indian guidance, I have fully recovered from breathing issues and leg pain and am now living a
+                fit, active, and vibrant life!"</p>
               <div class="card-footer">
                 <span><i class="fa-regular fa-clock"></i> Chhibramau, UP (Age: 35)</span>
                 <span class="check-mark"><i class="fa-solid fa-check"></i> Verified Member</span>
@@ -553,7 +598,9 @@
                 <i class="fa-solid fa-scale-balanced"></i>
                 <span>Lost 20 KG in Just 3 Months</span>
               </div>
-              <p class="member-story">"Struggled with constant laziness, sluggishness, and fatigue during work hours. After shedding 20 KG naturally, I now manage my inverter business with full energy, agility, and a healthy lifestyle!"</p>
+              <p class="member-story">"Struggled with constant laziness, sluggishness, and fatigue during work hours.
+                After shedding 20 KG naturally, I now manage my inverter business with full energy, agility, and a
+                healthy lifestyle!"</p>
               <div class="card-footer">
                 <span><i class="fa-regular fa-clock"></i> Gursahaiganj, UP (Age: 42)</span>
                 <span class="check-mark"><i class="fa-solid fa-check"></i> Verified Member</span>
@@ -577,7 +624,9 @@
                 <i class="fa-solid fa-scale-balanced"></i>
                 <span>Lost 19 KG in 2–3 Months</span>
               </div>
-              <p class="member-story">"Overcame severe leg pain, fatigue, and physical heaviness due to obesity. In just 2–3 months of home kitchen meal planning, I defeated sluggishness and achieved a fit, active, and light body!"</p>
+              <p class="member-story">"Overcame severe leg pain, fatigue, and physical heaviness due to obesity. In just
+                2–3 months of home kitchen meal planning, I defeated sluggishness and achieved a fit, active, and light
+                body!"</p>
               <div class="card-footer">
                 <span><i class="fa-regular fa-clock"></i> Mumbai (Age: ~34)</span>
                 <span class="check-mark"><i class="fa-solid fa-check"></i> Verified Member</span>
@@ -601,7 +650,9 @@
                 <i class="fa-solid fa-scale-balanced"></i>
                 <span>Lost 8–9 KG &amp; Walked Again!</span>
               </div>
-              <p class="member-story">"I was bedridden due to severe health issues with almost no expectation of walking again. Following Vinod Sharma Sir's guidance, I miraculously recovered from bed rest and now travel freely across India without any difficulty!"</p>
+              <p class="member-story">"I was bedridden due to severe health issues with almost no expectation of walking
+                again. Following Vinod Sharma Sir's guidance, I miraculously recovered from bed rest and now travel
+                freely across India without any difficulty!"</p>
               <div class="card-footer">
                 <span><i class="fa-regular fa-clock"></i> Gursahaiganj, UP (Age: 39)</span>
                 <span class="check-mark"><i class="fa-solid fa-check"></i> Verified Member</span>
@@ -625,7 +676,9 @@
                 <i class="fa-solid fa-scale-balanced"></i>
                 <span>Lost 38 KG Stubborn Fat</span>
               </div>
-              <p class="member-story">"Suffered from chronic joint and knee pain along with other obesity-related discomforts. Shedding an incredible 38 KG naturally has made me completely pain-free, active, and enjoying a joyful, healthy lifestyle!"</p>
+              <p class="member-story">"Suffered from chronic joint and knee pain along with other obesity-related
+                discomforts. Shedding an incredible 38 KG naturally has made me completely pain-free, active, and
+                enjoying a joyful, healthy lifestyle!"</p>
               <div class="card-footer">
                 <span><i class="fa-regular fa-clock"></i> Ujjain, Madhya Pradesh</span>
                 <span class="check-mark"><i class="fa-solid fa-check"></i> Verified Member</span>
@@ -646,7 +699,9 @@
         <img src="images/vinod_sharma.jpg" alt="Coach Vinod Sharma" class="new-coach-photo">
       </div>
       <div class="new-coach-bio">
-        <p>Hi, I am Vinod Sharma, Founder of Shine Fitness Club. My personal journey began at 110 KG. Through scientific nutrition and sustainable habits, I naturally lost 25 KG and reached 85 KG. Over the past 1.5+ years, I have helped dozens of individuals achieve their health goals without extreme diets or starvation.</p>
+        <p>Hi, I am Vinod Sharma, Founder of Shine Fitness Club. My personal journey began at 110 KG. Through scientific
+          nutrition and sustainable habits, I naturally lost 25 KG and reached 85 KG. Over the past 1.5+ years, I have
+          helped dozens of individuals achieve their health goals without extreme diets or starvation.</p>
         <div class="new-badges">
           <span class="new-badge btn-ripple"><i class="fa-solid fa-weight-scale"></i> 25 KG Fat Loss Story</span>
           <span class="new-badge btn-ripple"><i class="fa-solid fa-calendar-check"></i> 1.5+ Years Experience</span>
@@ -670,14 +725,18 @@
 
       <div class="bmi-card-3d">
         <!-- Left Column: Input Form -->
-        <div class="bmi-form-wrapper glass-panel" style="border-radius: 1rem; padding: 1.5rem; background: rgba(255,255,255,0.9);">
-          
+        <div class="bmi-form-wrapper glass-panel"
+          style="border-radius: 1rem; padding: 1.5rem; background: rgba(255,255,255,0.9);">
+
           <div class="bmi-input-group" style="margin-bottom: 1.5rem;">
-            <label style="display:block; margin-bottom: 0.5rem; font-weight:600;"><i class="fa-solid fa-ruler"></i> Height Unit</label>
+            <div style="display:block; margin-bottom: 0.5rem; font-weight:600;"><i class="fa-solid fa-ruler"></i>
+              Height Unit</div>
             <div class="bmi-toggle-group">
-              <input type="radio" id="unit-ft" name="bmi-unit" value="ft" class="bmi-toggle-input" checked onchange="switchBmiUnit('ft')">
+              <input type="radio" id="unit-ft" name="bmi-unit" value="ft" class="bmi-toggle-input" checked
+                onchange="switchBmiUnit('ft'); calculateSmartBMI();">
               <label for="unit-ft" class="bmi-toggle-label">Feet &amp; Inches</label>
-              <input type="radio" id="unit-cm" name="bmi-unit" value="cm" class="bmi-toggle-input" onchange="switchBmiUnit('cm')">
+              <input type="radio" id="unit-cm" name="bmi-unit" value="cm" class="bmi-toggle-input"
+                onchange="switchBmiUnit('cm'); calculateSmartBMI();">
               <label for="unit-cm" class="bmi-toggle-label">Centimeters</label>
               <div class="bmi-toggle-slider" id="unit-slider"></div>
             </div>
@@ -687,14 +746,18 @@
           <div class="bmi-input-group" style="display: flex; gap: 15px; margin-bottom: 1.5rem;">
             <div style="flex: 1;">
               <label for="bmi-age"><i class="fa-solid fa-user-clock"></i> Your Age</label>
-              <input type="number" id="bmi-age" class="bmi-control" placeholder="e.g. 28" min="10" max="100">
+              <input type="number" id="bmi-age" class="bmi-control" placeholder="e.g. 28" min="10" max="100"
+                oninput="calculateSmartBMI()">
             </div>
             <div style="flex: 1;">
-              <label style="display:block; margin-bottom: 0.5rem; font-weight:600;"><i class="fa-solid fa-venus-mars"></i> Gender</label>
+              <div style="display:block; margin-bottom: 0.5rem; font-weight:600;"><i
+                  class="fa-solid fa-venus-mars"></i> Gender</div>
               <div class="bmi-toggle-group">
-                <input type="radio" id="gender-male" name="bmi-gender" value="male" class="bmi-toggle-input" checked>
+                <input type="radio" id="gender-male" name="bmi-gender" value="male" class="bmi-toggle-input" checked
+                  onchange="calculateSmartBMI()">
                 <label for="gender-male" class="bmi-toggle-label">Male</label>
-                <input type="radio" id="gender-female" name="bmi-gender" value="female" class="bmi-toggle-input">
+                <input type="radio" id="gender-female" name="bmi-gender" value="female" class="bmi-toggle-input"
+                  onchange="calculateSmartBMI()">
                 <label for="gender-female" class="bmi-toggle-label">Female</label>
                 <div class="bmi-toggle-slider"></div>
               </div>
@@ -704,19 +767,22 @@
           <!-- Weight Input -->
           <div class="bmi-input-group" style="margin-bottom: 1.5rem;">
             <label for="bmi-weight"><i class="fa-solid fa-weight-scale"></i> Your Weight in Kilograms (KG)</label>
-            <input type="number" id="bmi-weight" class="bmi-control" placeholder="e.g. 85" step="0.1" min="20" max="250">
+            <input type="number" id="bmi-weight" class="bmi-control" placeholder="e.g. 85" step="0.1" min="20" max="250"
+              oninput="calculateSmartBMI()">
           </div>
 
           <!-- Height Input: Feet &amp; Inches (Active by default) -->
           <div id="height-ft-container" class="bmi-input-group">
-            <label><i class="fa-solid fa-ruler-vertical"></i> Your Height</label>
+            <div><i class="fa-solid fa-ruler-vertical"></i> Your Height</div>
             <div class="bmi-input-row" style="display:flex; gap:10px;">
               <div style="flex:1;">
-                <input type="number" id="bmi-ft" class="bmi-control" placeholder="Feet (e.g. 5)" min="3" max="7">
+                <input type="number" id="bmi-ft" class="bmi-control" placeholder="Feet (e.g. 5)" min="3" max="7"
+                  oninput="calculateSmartBMI()">
                 <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700;">FEET</span>
               </div>
               <div style="flex:1;">
-                <input type="number" id="bmi-in-rem" class="bmi-control" placeholder="Inches (e.g. 8)" min="0" max="11">
+                <input type="number" id="bmi-in-rem" class="bmi-control" placeholder="Inches (e.g. 8)" min="0" max="11"
+                  oninput="calculateSmartBMI()">
                 <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700;">INCHES</span>
               </div>
             </div>
@@ -725,23 +791,18 @@
           <!-- Height Input: CM (Hidden by default) -->
           <div id="height-cm-container" class="bmi-input-group" style="display: none;">
             <label for="bmi-cm"><i class="fa-solid fa-ruler-vertical"></i> Your Height (CM)</label>
-            <input type="number" id="bmi-cm" class="bmi-control" placeholder="e.g. 170" min="90" max="250">
+            <input type="number" id="bmi-cm" class="bmi-control" placeholder="e.g. 170" min="90" max="250"
+              oninput="calculateSmartBMI()">
           </div>
-          
-          <button type="button" class="new-cta-btn btn-ripple" style="width:100%; margin-top: 1rem;" onclick="calculateSmartBMI()">
-            <i class="fa-solid fa-calculator"></i> Calculate My BMI Score
-          </button>
-          
-          <!-- Dynamic Risk Card -->
-          <div id="health-risk-card" class="health-risk-card">
-            <h3 id="risk-title" style="font-size: 1.5rem; margin-bottom: 0.5rem; font-family: 'Outfit', sans-serif;">---</h3>
-            <p id="risk-desc" style="font-size: 1rem; margin-bottom: 0.5rem;">---</p>
-            <div class="bio-age" id="risk-bio-age">Biological Age: ---</div>
-          </div>
+
+          <!-- Dynamic Risk Card (Moved to right column) -->
         </div>
 
         <!-- Right Column: Dynamic Results &amp; Alerts -->
         <div class="bmi-result-wrapper" id="bmi-result-wrapper">
+          <h2
+            style="text-align: center; font-size: 2.2rem; margin-bottom: 1rem; color: #0d9488; text-transform: uppercase; font-weight: 900; letter-spacing: 1.5px; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">
+            Your BMI Result</h2>
           <div class="bmi-score-box">
             <div class="bmi-score-number" id="bmi-score-val">--</div>
             <div class="bmi-score-label" id="bmi-status-lbl">Enter Details Above</div>
@@ -757,6 +818,35 @@
             </div>
           </div>
 
+          <!-- Dynamic Risk Card -->
+          <div id="health-risk-card" class="health-risk-card">
+            <h3 id="risk-title" style="font-size: 1.5rem; margin-bottom: 0.5rem; font-family: 'Outfit', sans-serif;">---
+            </h3>
+            <p id="risk-desc" style="font-size: 1rem; margin-bottom: 0.5rem;">---</p>
+            <div class="bio-age" id="risk-bio-age">Biological Age: ---</div>
+          </div>
+
+          <!-- Age Explanation Box (Moved from bottom) -->
+          <div class="age-explanation"
+            style="margin-top: 15px; padding: 25px; background: rgba(255, 255, 255, 0.03); border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);">
+            <h3 style="color: var(--primary-teal); margin-bottom: 15px; font-size: 1.2rem;">Chronological Age vs
+              Biological
+              Age (क्रोनोलॉजिकल उम्र vs बायोलॉजिकल उम्र)</h3>
+            <p style="margin-bottom: 10px; font-size: 0.95rem; line-height: 1.6; color: var(--text-light);">
+              <strong>Chronological Age (क्रोनोलॉजिकल उम्र):</strong> Yeh aapki actual age (asli umar) hai, jo aapke
+              birth
+              date se calculate hoti hai. Jaise agar aap 30 saal ke hain, toh aapki chronological age 30 hai.
+            </p>
+            <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-light);">
+              <strong>Biological Age (बायोलॉजिकल उम्र):</strong> Yeh aapki body ki andar se age hai, jo aapke fitness
+              level,
+              BMI, aur weight ke according decide hoti hai. Agar aapka weight aur BMI jyada hai, toh aapki body andar se
+              apni actual age se zyada purani (boodhi) lagne lagti hai. Sahi weight aur healthy BMI se aap apni
+              biological
+              age ko actual age se kam rakh sakte hain!
+            </p>
+          </div>
+
           <div class="bmi-cta-box" id="bmi-cta-box" style="display: none;">
             <p>Want a customized action plan based on your BMI score?</p>
             <button type="button" class="btn-primary-animated open-modal-btn"
@@ -765,15 +855,6 @@
             </button>
           </div>
         </div>
-      </div>
-      <div class="age-explanation" style="margin-top: 40px; padding: 25px; background: rgba(255, 255, 255, 0.03); border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);">
-        <h3 style="color: var(--primary-teal); margin-bottom: 15px; font-size: 1.2rem;">Chronological Age vs Biological Age (क्रोनोलॉजिकल उम्र vs बायोलॉजिकल उम्र)</h3>
-        <p style="margin-bottom: 10px; font-size: 0.95rem; line-height: 1.6; color: var(--text-light);">
-          <strong>Chronological Age (क्रोनोलॉजिकल उम्र):</strong> Yeh aapki actual age (asli umar) hai, jo aapke birth date se calculate hoti hai. Jaise agar aap 30 saal ke hain, toh aapki chronological age 30 hai.
-        </p>
-        <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-light);">
-          <strong>Biological Age (बायोलॉजिकल उम्र):</strong> Yeh aapki body ki andar se age hai, jo aapke fitness level, BMI, aur weight ke according decide hoti hai. Agar aapka weight aur BMI jyada hai, toh aapki body andar se apni actual age se zyada purani (boodhi) lagne lagti hai. Sahi weight aur healthy BMI se aap apni biological age ko actual age se kam rakh sakte hain!
-        </p>
       </div>
     </div>
   </section>
@@ -785,11 +866,13 @@
       <div class="new-slider-card new-3d-card">
         <h3 style="margin-bottom: 1.5rem; color: #0d9488;">Weight Loss Goal Estimator</h3>
         <div class="new-slider-group">
-          <label for="new-current-weight">Current Weight: <span id="new-current-weight-val" class="new-val-badge">80 KG</span></label>
+          <label for="new-current-weight">Current Weight: <span id="new-current-weight-val" class="new-val-badge">80
+              KG</span></label>
           <input type="range" id="new-current-weight" min="40" max="150" value="80" class="new-range-input">
         </div>
         <div class="new-slider-group">
-          <label for="new-goal-weight">Goal Weight: <span id="new-goal-weight-val" class="new-val-badge">65 KG</span></label>
+          <label for="new-goal-weight">Goal Weight: <span id="new-goal-weight-val" class="new-val-badge">65
+              KG</span></label>
           <input type="range" id="new-goal-weight" min="40" max="150" value="65" class="new-range-input">
         </div>
         <div class="new-calculation-result">
@@ -802,7 +885,8 @@
             <span class="new-value" id="new-recommended-duration">15-30 Weeks</span>
           </div>
         </div>
-        <button class="new-cta-btn new-open-survey-btn btn-ripple" style="width: 100%;">Get Personal Plan &rarr;</button>
+        <button type="button" class="new-cta-btn new-open-survey-btn btn-ripple" style="width: 100%;">Get Personal Plan
+          &rarr;</button>
       </div>
 
       <div class="new-counter-wrapper">
@@ -830,7 +914,7 @@
           <div class="benefit-item">
             <div class="benefit-icon"><i class="fa-solid fa-utensils"></i></div>
             <div class="benefit-text">
-              <h4>100% Customized Home Kitchen Diet</h4>
+              <h3>100% Customized Home Kitchen Diet</h3>
               <p>No boring boiled vegetables or expensive supplements. We design personalized meal plans around your
                 family's daily Indian kitchen routines.</p>
             </div>
@@ -839,7 +923,7 @@
           <div class="benefit-item">
             <div class="benefit-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
             <div class="benefit-text">
-              <h4>Metabolic Reset Technique</h4>
+              <h3>Metabolic Reset Technique</h3>
               <p>Learn how to optimize your eating windows and food pairings to turn your body into a 24/7 fat-burning
                 furnace naturally.</p>
             </div>
@@ -848,7 +932,7 @@
           <div class="benefit-item">
             <div class="benefit-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
             <div class="benefit-text">
-              <h4>Daily WhatsApp &amp; Live Zoom Accountability</h4>
+              <h3>Daily WhatsApp &amp; Live Zoom Accountability</h3>
               <p>You are never alone on your journey! Get daily plate reviews, motivation, and live interactive guidance
                 directly from Vinod Sharma.</p>
             </div>
@@ -889,7 +973,7 @@
         </div>
 
         <div style="margin-top: 28px; text-align: center;">
-          <button class="btn-primary-animated open-modal-btn" style="width: 100%;">
+          <button type="button" class="btn-primary-animated open-modal-btn" style="width: 100%;">
             <span>⚡ Claim Your Custom Plan Now</span>
           </button>
         </div>
@@ -957,7 +1041,7 @@
       <h2>Your 10 to 25 KG Fat Loss Transformation Starts Today!</h2>
       <p>Don't spend another day feeling uncomfortable in your own clothes. Book your free 1-on-1 consultation with
         Vinod Sharma and get your personalized roadmap to success.</p>
-      <button class="btn-primary-animated open-modal-btn"
+      <button type="button" class="btn-primary-animated open-modal-btn"
         style="background: #ffffff; color: var(--primary-teal-dark); box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
         <span>🚀 BOOK FREE CONSULTATION NOW</span>
       </button>
@@ -969,7 +1053,7 @@
        ========================================================================== -->
   <div class="modal-overlay" id="consultation-modal">
     <div class="modal-content" id="survey-modal-content">
-      <button class="modal-close-btn" id="close-modal-btn" aria-label="Close Modal"><i
+      <button type="button" class="modal-close-btn" id="close-modal-btn" aria-label="Close Modal"><i
           class="fa-solid fa-xmark"></i></button>
 
       <!-- Step Indicator Header -->
@@ -1147,7 +1231,7 @@
        FLOATING WHATSAPP ACTION BUTTON
        ========================================================================== -->
   <a href="https://wa.me/919839251050?text=Hello%20Vinod%20Sharma%20Sir,%20I%20want%20to%20know%20your%2025%20KG%20Weight%20Loss%20Secret%20and%20start%20my%20free%20consultation!"
-    target="_blank" class="floating-wa-btn" aria-label="Chat on WhatsApp">
+    target="_blank" rel="noopener noreferrer" class="floating-wa-btn" aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
@@ -1172,11 +1256,11 @@
       <div class="footer-links">
         <h4>Quick Navigation</h4>
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="javascript:void(0)">Home</a></li>
           <li><a href="#gallery">Transformation Stories</a></li>
           <li><a href="#bmi-calculator">Smart BMI Calculator</a></li>
           <li><a href="#secret">The 25 KG Loss Secret</a></li>
-          <li><a href="#" class="open-modal-btn">Free Consultation</a></li>
+          <li><a href="javascript:void(0)" class="open-modal-btn">Free Consultation</a></li>
         </ul>
       </div>
 
@@ -1199,7 +1283,7 @@
   <!-- NEW SECTION 5: CONDITIONAL SURVEY POP-UP -->
   <div id="new-survey-modal" class="new-modal-overlay">
     <div class="new-modal-content new-3d-card">
-      <button class="new-close-modal">&times;</button>
+      <button type="button" class="new-close-modal">&times;</button>
       <div class="new-modal-header">
         <h2 class="new-brand-title">SHINE FITNESS CLUB</h2>
         <div class="new-progress-indicator">
@@ -1208,25 +1292,25 @@
           <span class="new-step-dot" data-step="3"></span>
         </div>
       </div>
-      
+
       <!-- Step 1 -->
       <div id="new-step-1" class="new-survey-step active">
         <h3>What is your primary goal?</h3>
         <div class="new-options">
-          <label class="new-survey-option">
+          <label class="new-survey-option" for="survey-option">
             <input type="radio" name="new-goal" value="Weight Loss">
             <span class="new-option-card">Weight Loss</span>
           </label>
-          <label class="new-survey-option">
+          <label class="new-survey-option" for="survey-option">
             <input type="radio" name="new-goal" value="Weight Gain">
             <span class="new-option-card">Weight Gain</span>
           </label>
-          <label class="new-survey-option">
+          <label class="new-survey-option" for="survey-option">
             <input type="radio" name="new-goal" value="Energy &amp; Fitness">
             <span class="new-option-card">Energy &amp; Fitness</span>
           </label>
         </div>
-        <button class="new-cta-btn new-next-step" data-next="new-step-2" disabled>Next &rarr;</button>
+        <button type="button" class="new-cta-btn new-next-step" data-next="new-step-2" disabled>Next &rarr;</button>
       </div>
 
       <!-- Step 2 -->
@@ -1248,8 +1332,8 @@
           </select>
         </div>
         <div class="new-modal-actions">
-          <button class="new-btn-secondary new-prev-step" data-prev="new-step-1">&larr; Back</button>
-          <button class="new-cta-btn new-next-step" data-next="new-step-3">Next &rarr;</button>
+          <button type="button" class="new-btn-secondary new-prev-step" data-prev="new-step-1">&larr; Back</button>
+          <button type="button" class="new-cta-btn new-next-step" data-next="new-step-3">Next &rarr;</button>
         </div>
       </div>
 
@@ -1270,8 +1354,8 @@
           <input type="email" id="new-lead-email" placeholder="Your Email">
         </div>
         <div class="new-modal-actions">
-          <button class="new-btn-secondary new-prev-step" data-prev="new-step-2">&larr; Back</button>
-          <button class="new-cta-btn new-submit-survey" id="new-submit-btn">Claim Offer &rarr;</button>
+          <button type="button" class="new-btn-secondary new-prev-step" data-prev="new-step-2">&larr; Back</button>
+          <button type="button" class="new-cta-btn new-submit-survey" id="new-submit-btn">Claim Offer &rarr;</button>
         </div>
       </div>
 
@@ -1279,7 +1363,7 @@
         <div class="new-success-icon">🎉</div>
         <h3>Success!</h3>
         <p>Your details have been submitted. Coach Vinod Sharma will contact you shortly via WhatsApp.</p>
-        <button class="new-cta-btn new-close-modal-btn">Close</button>
+        <button type="button" class="new-cta-btn new-close-modal-btn">Close</button>
       </div>
 
     </div>
