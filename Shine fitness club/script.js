@@ -445,6 +445,8 @@ function calculateBMI() {
   const ftInput = document.getElementById('bmi-ft');
   const inRemInput = document.getElementById('bmi-in-rem');
   const inTotalInput = document.getElementById('bmi-in-total');
+  const ageInput = document.getElementById('bmi-age');
+  const genderInput = document.getElementById('bmi-gender');
 
   const scoreValEl = document.getElementById('bmi-score-val');
   const statusLblEl = document.getElementById('bmi-status-lbl');
@@ -454,6 +456,8 @@ function calculateBMI() {
   if (!weightInput || !scoreValEl) return;
 
   const weight = parseFloat(weightInput.value);
+  const age = ageInput ? parseInt(ageInput.value) : 0;
+  const gender = genderInput ? genderInput.value : '';
   let totalInches = 0;
 
   if (activeBmiTab === 'ft') {
@@ -465,7 +469,7 @@ function calculateBMI() {
   }
 
   // Validate inputs
-  if (isNaN(weight) || weight <= 0 || isNaN(totalInches) || totalInches <= 0) {
+  if (isNaN(weight) || weight <= 0 || isNaN(totalInches) || totalInches <= 0 || isNaN(age) || age <= 0 || !gender) {
     scoreValEl.textContent = '--';
     statusLblEl.textContent = 'Enter Details Above';
     scoreValEl.style.color = 'var(--text-light)';
@@ -473,7 +477,7 @@ function calculateBMI() {
     alertContainer.innerHTML = `
       <div class="bmi-alert-box" style="background: var(--teal-soft); border: 2px solid rgba(13, 148, 136, 0.2); color: var(--primary-teal-dark);">
         <div class="bmi-alert-icon"><i class="fa-solid fa-circle-info"></i></div>
-        <div>Please enter your weight (in KG) and height (in Feet/Inches) to see your scientific BMI analysis and personalized health risk report by Vinod Sharma.</div>
+        <div>Please enter your age, gender, weight, and height to see your scientific BMI analysis, biological age, and personalized health risk report.</div>
       </div>
     `;
     if (ctaBox) ctaBox.style.display = 'none';
@@ -487,6 +491,37 @@ function calculateBMI() {
 
   scoreValEl.textContent = bmiRounded;
   if (ctaBox) ctaBox.style.display = 'block';
+
+  let biologicalAgeText = '';
+  if (age > 0 && gender) {
+    let bioAge = age;
+    if (bmi < 18.5) {
+      bioAge = age + Math.round((18.5 - bmi) * 1.5);
+    } else if (bmi > 24.9) {
+      bioAge = age + Math.round((bmi - 24.9) * (gender === 'female' ? 1.3 : 1.5));
+    } else {
+      bioAge = Math.max(1, age - 2); 
+    }
+    
+    let ageDiff = bioAge - age;
+    let bioMessage = '';
+    
+    if (ageDiff > 0) {
+      bioMessage = `<span style="color: #ef4444; font-weight: bold;">You are biologically ${ageDiff} years older than your actual age!</span>`;
+    } else if (ageDiff < 0) {
+      bioMessage = `<span style="color: #16a34a; font-weight: bold;">Great! You are biologically ${Math.abs(ageDiff)} years younger than your actual age.</span>`;
+    } else {
+      bioMessage = `<span style="color: #16a34a; font-weight: bold;">Your biological age matches your actual age. Keep it up!</span>`;
+    }
+
+    biologicalAgeText = `
+      <div style="margin-top: 15px; padding-top: 12px; border-top: 1px solid rgba(0,0,0,0.1);">
+        <strong style="color: #333;">Chronological Age:</strong> <span style="color: #333;">${age} Years</span><br>
+        <strong style="color: #333;">Biological Age:</strong> <span style="color: #333;">${bioAge} Years</span><br>
+        <div style="margin-top: 5px;">${bioMessage}</div>
+      </div>
+    `;
+  }
 
   let alertHtml = '';
   let statusText = '';
@@ -502,6 +537,7 @@ function calculateBMI() {
         <div>
           <strong style="display: block; font-size: 1.05rem; margin-bottom: 4px;">⚠️ Your weight is below normal!</strong>
           <span><strong>Health Risks:</strong> Low immunity, constant fatigue, weak bones (osteoporosis), and nutritional deficiency.</span>
+          ${biologicalAgeText}
         </div>
       </div>
     `;
@@ -515,6 +551,7 @@ function calculateBMI() {
         <div>
           <strong style="display: block; font-size: 1.05rem; margin-bottom: 4px;">🎉 Awesome! Your BMI is in the healthy range.</strong>
           <span>Maintain it with proper nutrition and active lifestyle guidance from Shine Fitness Club.</span>
+          ${biologicalAgeText}
         </div>
       </div>
     `;
@@ -528,6 +565,7 @@ function calculateBMI() {
         <div>
           <strong style="display: block; font-size: 1.05rem; margin-bottom: 4px;">🚨 Caution! You are overweight.</strong>
           <span><strong>Health Risks:</strong> Lethargy, joint pain, fatty liver, and increased risk of Type-2 Diabetes.</span>
+          ${biologicalAgeText}
         </div>
       </div>
     `;
@@ -541,6 +579,7 @@ function calculateBMI() {
         <div>
           <strong style="display: block; font-size: 1.05rem; margin-bottom: 4px;">🛑 High Alert! You are in the Obesity range.</strong>
           <span><strong>Health Risks:</strong> High blood pressure, heart issues, severe joint pressure, and difficulty breathing.</span>
+          ${biologicalAgeText}
         </div>
       </div>
     `;
