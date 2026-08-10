@@ -5,6 +5,17 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Handle direct hash routing on page load for smooth scrolling
+  if (window.location.hash) {
+    const targetSection = document.querySelector(window.location.hash);
+    if (targetSection) {
+      // Small timeout to allow browser layout to settle
+      setTimeout(() => {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  }
+
   // BOOM Splash Screen Logic
   const splash = document.getElementById('splash-screen');
   const boomCta = document.getElementById('boom-cta-btn');

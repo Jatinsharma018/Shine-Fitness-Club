@@ -7,6 +7,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
 :root {
   /* Color Palette - Fresh Teal & Vibrant Lime Green with Soft Light Theme */
   --primary-teal: #0d9488;
