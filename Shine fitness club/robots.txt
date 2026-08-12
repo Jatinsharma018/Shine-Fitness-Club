@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://shine-fitness-club.vercel.app/sitemap.xml
+Sitemap: https://shine-fitness-club.vercel.app/image-sitemap.xml
