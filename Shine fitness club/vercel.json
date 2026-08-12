@@ -5,6 +5,21 @@
       "source": "/weight-loss",
       "destination": "/#gallery",
       "permanent": false
+    },
+    {
+      "source": "/about",
+      "destination": "/#about",
+      "permanent": false
+    },
+    {
+      "source": "/bmi-calculator",
+      "destination": "/#bmi-calculator",
+      "permanent": false
+    },
+    {
+      "source": "/bmi",
+      "destination": "/#bmi-calculator",
+      "permanent": false
     }
   ]
 }
